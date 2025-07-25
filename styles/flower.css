@@ -245,7 +245,7 @@
 
 
 footer {
-  font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 /* Newsletter */
@@ -255,6 +255,7 @@ footer {
   margin-top: 80px;
   padding: 60px 20px;
   color: white;
+  
 }
 
 .newsletter h2 {
@@ -395,16 +396,21 @@ footer {
      grid-template-columns: repeat(1, 1fr);
   }
  
-  @media (max-width: 768px) {
+  
   .newsletter-form {
-    flex-direction: column;
-    gap: 10px;
+      flex-direction: row;
+    flex-wrap: nowrap;
+   
+    justify-content: center;
   }
 
-  .newsletter-form input,
+  .newsletter-form input[type="email"]{
+    flex: 1 1 auto;
+    width: auto;
+  }
   .newsletter-form button {
-    border-radius: 4px;
-    width: 100%;
+    white-space: nowrap;
+    padding: 0 16px;
   }
 
   .footer-bottom {
@@ -439,4 +445,3 @@ footer {
   }
 }
 
-}
